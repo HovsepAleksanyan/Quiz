@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var polindrom = prompt();
+        // var straight = [];
+        // var opposite = ['p', 'o', 'p'];
+
+        // var pol = false;
+
+        // for (i = 0; i < polindrom.length; i++){
+        //     straight.push(polindrom[i]);
+        //     // for (j = 3; j < polindrom.length; j--){
+        //     //     opposite.push(polindrom[j]);
+        //     // }
+        //     if (polindrom[i] === opposite[i]) {
+        //         pol = true;
+        //     }
+        // }
+        // console.log(straight);
+        // console.log(opposite);
+
+        // if (pol) {
+        //     console.log('ohh yeah');
+        // }
+
+
+
+        // var polindrom = prompt();
+        // var opposite = "";
+
+        // for (var i = polindrom.length - 1; i >= 0; i--) {
+        //     opposite = opposite + polindrom[i]
+        // }
+        // if (polindrom == opposite) {
+        //     console.log("Ok");
+        // }
+        // else {
+        //     console.log("No Ok");
+        // }
+
+
+
+
+
+        
+        var str = prompt();
+        var sim = prompt();
+
+        var count = 0;
+
+        if (sim.length != 1) {
+            alert("Please enter one simbhol")
+        }
+        else {
+            for (i = 0; i < str.length; i++) {
+                if (sim == str[i]) {
+                    count++;
+                }
+            }
+            alert(count);
+        }
+    </script>
+</body>
+
+</html>

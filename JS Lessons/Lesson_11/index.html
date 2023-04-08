@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <ul id="myList">
+
+    </ul>
+
+    <script>
+        var array = random(10);
+        var htmlIp = document.getElementById("myList");
+        var myHtmlList = "";
+
+        function random(lng) {
+            var rndResult = [];
+
+            for (var i = 0; i < lng; i++) {
+                rndResult[i] = Math.floor(Math.random() * 100);
+            }
+
+            return rndResult;
+        }
+
+        function evenOrOdd(num) {
+            for (var e = 0; e < num.length; e++) {
+                if (num[e] % 2 == 0) {
+                    myHtmlList = myHtmlList + "<li class='even'>" + array[e] + "</li>";
+                } else {
+                    myHtmlList = myHtmlList + "<li class='odd'>" + array[e] + "</li>";
+                }
+            }
+        }
+
+        evenOrOdd(array)
+
+        htmlIp.innerHTML = myHtmlList;
+
+    </script>
+</body>
+
+</html>

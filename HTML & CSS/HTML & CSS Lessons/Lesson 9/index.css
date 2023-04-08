@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* div{
+    border: 2px solid;
+    width: 25%;
+    float: left;
+} */
+
+main{
+    background-color: rgb(255, 0, 0);
+}
+
+div{
+    border: 2px solid;
+    width: 25%;
+    float: right;
+}
+
+span{
+    display: block;
+clear: both;
+}
+
+
+
+main:after{
+    content: attr(data-text);
+    display: block;
+}
+
+main:before{
+    content: attr(data-before);
+    display: block;
+}
+
+.child-1:before{
+    content: '5';
+}
+
+
+
+
+
+
+
+.footer{
+    position: relative;
+    border: 0.5px solid;
+    width: 300px;
+    max-width: 100%;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.footer div{
+    position: absolute;
+    z-index: 1;
+    background-color: blue;
+    width: 10px;
+    height: 10px;
+    transition:all 1s
+    ;
+}
+
+
+.left-top{
+    top: 0;
+    left: 0;
+}
+
+.right-top{
+    right: 0;
+    top: 0;
+}
+
+.left-bottom{
+    left: 0;
+    bottom: 0;
+}
+
+.right-bottom{
+    right: 0;
+    bottom: 0;
+}
+
+
+.footer:hover > div{
+    width: 50%;
+}
+
+
+/*  */
+
+.tesla{
+    position: relative;
+    width: 250px;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0 auto;
+    border: 0.5px solid;
+    padding: 10px;
+    text-align: center;
+}
+
+.tesla div{
+    width: 8px;
+    height: 8px;
+    background-color: steelblue;
+    border: 0.3px solid;
+
+    position: absolute;
+    z-index: 1;
+    transition:all 1s;
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (min-width:567px) and (max-width: 767px){
+    div{
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+

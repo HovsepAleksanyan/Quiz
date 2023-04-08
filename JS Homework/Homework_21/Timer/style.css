@@ -1,0 +1,9 @@
+p {
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bolder;
+    margin: 15px auto;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+}

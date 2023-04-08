@@ -1,0 +1,93 @@
+* {
+    font-size: 25px;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+section {
+    margin: 25% auto 0;
+}
+
+button {
+    display: block;
+}
+
+.answerBox {
+    display: flex;
+    width: 51%;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.answerBox div {
+    border: 5px outset steelblue;
+    background-color: lightblue;
+    border-radius: 30px;
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+}
+
+.question {
+    border: 5px outset steelblue;
+    background-color: lightblue;
+    border-radius: 30px;
+    width: 50%;
+    padding: 5px;
+    margin: 5px auto;
+    text-align: center;
+}
+
+.lose {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    margin: 23% auto 0;
+}
+.winner{
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    margin: 23% auto 0;
+}
+
+.lose button{
+    margin: 0 auto;
+}
+.winner button{
+    margin: 0 auto;
+}
+
+.lose p {
+    margin: 2px;
+    font-weight: bold;
+    color: red;
+    font-size: 40px;
+}
+
+.winner p {
+    margin: 2px;
+    font-weight: bold;
+    color: red;
+    font-size: 40px;
+}
+
+.start {
+    margin: 23% auto 0;
+}
+
+.time{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 65px;
+    height: 65px;
+    border: 6px inset seagreen;
+    background-color: MediumSeaGreen;
+    border-radius: 50%;
+    text-align: center;
+    padding: 15px 0 0;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 14</title>
+</head>
+
+<body>
+    <input type="text" id="header" placeholder="Header">
+    <br>
+    <input type="text" id="task-1" placeholder="Task 1">
+    <br>
+    <input type="text" id="task-2" placeholder="Task 2">
+    <br>
+    <input type="text" id="task-3" placeholder="Task 3">
+    <br>
+    <button onclick="getTasks()">Add</button>
+
+    <div id="taskDiv"></div>
+
+    <script>
+        var q = [];
+
+        function getTasks() {
+            var header = document.getElementById("header").value;
+            var task_1 = document.getElementById("task-1").value;
+            var task_2 = document.getElementById("task-2").value;
+            var task_3 = document.getElementById("task-3").value;
+            var divTask = document.getElementById("taskDiv");
+
+            if (header == "" || task_1 == "" || task_2 == "" || task_3 == "") {
+                if (header == "") {
+                    alert("Fill in in the Header field");
+                }
+                if (task_1 == "") {
+                    alert("Fill in in the Task 1 field");
+                }
+                if (task_2 == "") {
+                    alert("Fill in in the Task 2 field");
+                }
+                if (task_3 == "") {
+                    alert("Fill in in the Task 3 field");
+                }
+            } else {
+                var taskResult = "";
+                var info = {
+                    header: header,
+                    task1: task_1,
+                    task2: task_2,
+                    task3: task_3
+                }
+                q.push(info);
+
+                for (var i = 0; i < q.length; i++) {
+                    taskResult += "<ul><li>" + q[i].header + "</li>" + "<ol>" + "<li>" + q[i].task1 + "</li>" +
+                        "<li>" + q[i].task2 + "</li>" + "<li>" + q[i].task3 + "</li>" + "</ol></ul>"
+                }
+                
+                
+                divTask.innerHTML = taskResult;
+                document.getElementById("header").value = "";
+                document.getElementById("task-1").value = "";
+                document.getElementById("task-2").value = "";
+                document.getElementById("task-3").value = "";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

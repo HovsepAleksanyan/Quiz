@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 10</title>
+</head>
+
+<body>
+    <ul id="myList"></ul>
+
+    <script>
+        var randomArray = randomNumber(5);
+
+        var htmlIp = document.getElementById("myList")
+
+        var myHtmlList = "";
+
+        for (var j = 0; j < randomArray.length; j++) {
+            myHtmlList = myHtmlList + "<li>" + randomArray[j] + "! = " + factorialize(randomArray[j]) + "</li>";
+        }
+
+        htmlIp.innerHTML = myHtmlList;
+
+
+        function factorialize(num) {
+            var result = 1;
+            for (var i = 1; i <= num; i++) {
+                result = result * i;
+            }
+
+            return result;
+        }
+        function randomNumber(length) {
+            var rndResult = [];
+
+            for (var i = 0; i < length; i++) {
+                rndResult[i] = Math.floor(Math.random() * 10)
+            }
+
+            return rndResult;
+        }
+    </script>
+</body>
+
+</html>

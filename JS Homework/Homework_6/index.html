@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework_6</title>
+</head>
+
+<body>
+    <script>
+        var information = {
+
+            primeNumber: [],
+
+            primeNumberSum: 0,
+
+            primeNumberMult: 0,
+
+            primeNumberSumDiv: 0,
+
+            primeNumberMultDiv: 0,
+
+            maxPrimeNumber: 0,
+
+            minPrimeNumber: 0,
+        }
+
+        var myArray = [4, 5, 6, 41, 3, 8, 9, 7];
+
+        var isPrime = false;
+        var primeSum = 0;
+        var primeMult = 1;
+        var primeSumDiv = 0;
+        var primeMultDiv = 0;
+        var count = 0;
+        var maxVal;
+
+        var i = 0;
+        var j = 2;
+        while (i < myArray.length) {
+            while (j < myArray[i]) {
+                if (myArray[i] % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+                else {
+                    isPrime = true;
+                }
+                j++
+            }
+            if (isPrime) {
+                count++;//
+                information.primeNumber.push(myArray[i]);
+
+                primeSum = primeSum + myArray[i];
+                information.primeNumberSum = primeSum;
+
+                primeMult = primeMult * myArray[i];
+                information.primeNumberMult = primeMult;
+
+                primeSumDiv = primeSum / count;
+                information.primeNumberSumDiv = primeSumDiv;
+
+                primeMultDiv = primeMult / count;
+                information.primeNumberMultDiv = primeMultDiv;
+            }
+            j = 2;
+            i++
+        }
+        console.log(information.primeNumber);
+        console.log(information.primeNumberSum);
+        console.log(information.primeNumberMult);
+        console.log(information.primeNumberSumDiv);
+        console.log(information.primeNumberMultDiv);
+
+        var z = 0;
+        var maxVal = information.primeNumber[0];
+        var minVal = information.primeNumber[0];
+        while (z < information.primeNumber.length) {
+            if (maxVal < information.primeNumber[z]) {
+                maxVal = information.primeNumber[z];
+            }
+            if (minVal > information.primeNumber[z]) {
+                minVal = information.primeNumber[z];
+            }
+            z++
+        }
+        console.log(maxVal);
+        console.log(minVal);
+
+    </script>
+</body>
+
+</html>

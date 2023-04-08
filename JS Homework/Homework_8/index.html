@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework_8</title>
+</head>
+
+<body>
+    <script>
+        var array = [];
+        var lng = parseInt(prompt("Send length"));
+
+        function randomaizer(x) {
+            for (var i = 0; i < x; i++) {
+                var random = Math.floor(Math.random() * 10);
+                array.push(random);
+            }
+            console.log(array);
+            return array;
+        }
+        function factorial(num) {
+            for (q = 0; q < num.length; q++) {
+                var result = 1;
+                for (var i = 1; i <= num[q]; i++) {
+                    result = result * i;
+                }
+                console.log(result);
+            }
+            return result;
+        }
+
+        randomaizer(lng)
+        factorial(array)
+    </script>
+</body>
+
+</html>

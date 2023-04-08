@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var side_a = parseInt(prompt("Side a"));
+        var side_b = parseInt(prompt("Side b"));
+        var side_c = parseInt(prompt("Side c"));
+
+        if (side_a + side_b > side_c && side_a + side_c > side_b && side_b + side_c > side_a) {
+            alert("There is such a triangle")
+        }
+        else {
+            alert("There is no such triangle")
+        }
+    </script>
+</body>
+
+</html>

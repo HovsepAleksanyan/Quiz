@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="wow.css">
+</head>
+
+<body>
+    <input type="text" id="personName" placeholder="Name">
+    <input type="text" id="personSurname" placeholder="Surame">
+    <button id="addPerson">Add</button>
+
+    <div id="sectionDiv"></div>
+
+    <script>
+        var myArray = [];
+        var button = document.getElementById("addPerson");
+        button.addEventListener("click", addData);
+
+        function addData() {
+            var namePerson = document.getElementById("personName").value;
+            var surnamePerson = document.getElementById("personSurname").value;
+
+            if (namePerson == "" || surnamePerson == "") {
+                if (namePerson == "") {
+                    alert("Fill in Name field");
+                }
+                if (surnamePerson == "") {
+                    alert("Fill in Surname field");
+                }
+            } else {
+                var personIp = "";
+
+                var tmpPerson = {
+                    name: namePerson,
+                    surname: surnamePerson,
+                    isClikced: false
+                }
+                myArray.push(tmpPerson);
+
+                for (var i = 0; i < myArray.length; i++) {
+                    personIp += "<div class='nsDiv'><span>" +
+                        myArray[i].name +
+                        "</span><span>" +
+                        myArray[i].surname +
+                        "</span></div>"
+                }
+                sectionDiv.innerHTML = personIp;
+
+                var resbtn = document.getElementsByClassName("nsDiv");
+                for (var j = 0; j < resbtn.length; j++) {
+                    resbtn[j].addEventListener("click", function () {
+                        if (this.isClikced == true) {
+                            this.classList.remove("clickedbtn");
+                            this.isClikced = false;
+                        } else {
+                            this.classList.add("clickedbtn");
+                            this.isClikced = true;
+                        }
+                    })
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

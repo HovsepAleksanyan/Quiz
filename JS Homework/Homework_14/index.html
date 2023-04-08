@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 14</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <input type="text" id="person-name" placeholder="Name" autocomplete="off">
+    <input type="text" id="person-surname" placeholder="Surname" autocomplete="off">
+
+    <button onclick="resultGet()">Add</button>
+
+    <div id="resultDiv" class="divResult"></div>
+
+    <script>
+        var persons = [];
+        var divCount = 0;
+
+        function resultGet() {
+            var personName = document.getElementById("person-name").value;
+            var personSurname = document.getElementById("person-surname").value;
+            var divResult = document.getElementById("resultDiv");
+
+            if (personName == "" || personSurname == "") {
+                if (personName == "") {
+                    alert("Fill in Name");
+                }
+                if (personSurname == "") {
+                    alert("Fill in Surname");
+                }
+            } else {
+                var personResult = "";
+
+                var information = {
+                    name: personName,
+                    surname: personSurname
+                }
+                persons.push(information);
+
+                for (var i = 0; i < persons.length; i++) {
+                    personResult += "<div class='nameSurname' id='person'>" + persons[i].name + " " + persons[i].surname + "</div>"
+                }
+                divResult.innerHTML = personResult;
+
+                document.getElementById("person-name").value = "";
+                document.getElementById("person-surname").value = "";
+            }
+
+            var printResult = document.getElementsByClassName("nameSurname");
+            for (var j = 0; j < printResult.length; j++) {
+                printResult[j].addEventListener("mouseover", function () {
+                    this.classList.add("blockHover");
+                })
+                printResult[j].addEventListener("mouseout", function () {
+                    this.classList.remove("blockHover");
+                })
+            }
+
+            for (var j = 0; j < printResult.length; j++) {
+                printResult[j].addEventListener("click", function () {
+
+                    for (var i = 0; i < printResult.length; i++) {
+                        printResult[i].classList.remove("blockClick");//
+                    }
+                    this.classList.add("blockClick");//
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadioButton List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <input type="text" id="car-brand" placeholder="Brand">
+    <input type="text" id="car-model" placeholder="Model">
+    <button id="btnAdd">Add</button>
+    <section id="htmlResultSection" class="bigDiv"></section>
+
+    <script>
+        var cars = [];
+        var button = document.getElementById('btnAdd');
+        button.addEventListener('click', infoGet);
+
+        function infoGet() {
+            var carBrand = document.getElementById('car-brand').value;
+            var carModel = document.getElementById('car-model').value;
+
+            if (carBrand == '' || carModel == '') {
+                if (carBrand == '') {
+                    alert('Fill in "Brand" field');
+                }
+                if (carModel == '') {
+                    alert('Fill in "Model" field');
+                }
+            } else {
+                var tmpCar = {
+                    brand: carBrand,
+                    model: carModel,
+                    isClicked: false
+                }
+                cars.push(tmpCar)
+
+                document.getElementById('car-brand').value = '';
+                document.getElementById('car-model').value = '';
+                drawCars(cars);
+            }
+        }
+
+        function drawCars(collection) {
+            var sectionHtml = document.getElementById('htmlResultSection');
+            var tmpHtml = '';
+
+            for (var i in collection) {
+                var nameClass = '';
+
+                if (collection[i].isClicked) {
+                    nameClass = 'container-car container-car-active';
+                } else {
+                    nameClass = 'container-car';
+                }
+                tmpHtml += '<div class="' + nameClass + '" data-car-index="' + i + '"><span>' +
+                    collection[i].brand +
+                    '</span><span>' +
+                    collection[i].model +
+                    '</span></div>';
+            }
+            sectionHtml.innerHTML = tmpHtml;
+
+            var carContainer = document.getElementsByClassName('container-car');
+            for (var j = 0; j < carContainer.length; j++) {
+                carContainer[j].addEventListener('click', function () {
+                    var carIndex = this.getAttribute('data-car-index');
+
+                    for (var l = 0; l < carContainer.length; l++) {
+                        carContainer[l].classList.remove('container-car-active');
+                        collection[l].isClicked = false;
+                    }
+                    this.classList.add('container-car-active');
+                    collection[carIndex].isClicked = true;
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>

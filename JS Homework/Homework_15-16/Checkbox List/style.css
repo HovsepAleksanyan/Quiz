@@ -1,0 +1,23 @@
+input:focus {
+    outline: none;
+}
+
+.resDiv {
+    margin: 30px 0;
+}
+
+span {
+    margin: 5px;
+}
+
+.data-box {
+    border: 2px solid grey;
+    width: 200px;
+    text-align: center;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.data-box-active {
+    background-color: aquamarine;
+}

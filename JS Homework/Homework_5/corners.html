@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var angleA = parseInt(prompt("A"));
+        var angleB = parseInt(prompt("B"));
+        var angleC = parseInt(prompt("C"));
+
+        var angleSum = angleA + angleB + angleC;
+
+        if (angleSum > 180) {
+            alert("The sum of the angles is greater than 180");
+        }
+        else if (angleSum < 180) {
+            alert("The sum of the angles is less than 180");
+        }
+        if (angleSum == 180) {
+            alert("There is such a triangle")
+        }
+        //angles
+        switch (angleA) {
+            case 0:
+                alert('Angle A must be greater than 0')
+                break;
+
+            default:
+                break;
+        }
+        switch (angleB) {
+            case 0:
+                alert('Angle B must be greater than 0')
+                break;
+
+            default:
+                break;
+        }
+        switch (angleC) {
+            case 0:
+                alert('Angle C must be greater than 0')
+                break;
+
+            default:
+                break;
+        }
+    </script>
+</body>
+
+</html>

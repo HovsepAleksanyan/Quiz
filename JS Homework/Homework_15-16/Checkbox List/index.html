@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <input type="text" id="name" placeholder="Name" autocomplete="off">
+    <input type="text" id="surname" placeholder="Surname" autocomplete="off">
+    <button id="addButton">Add</button>
+    <div id="myDiv" class="resDiv"></div>
+
+    <script>
+        var dataCollection = [];
+
+        var button = document.getElementById('addButton');
+        button.addEventListener('click', dataGet);
+
+        function dataGet() {
+            var name = document.getElementById('name').value;
+            var surname = document.getElementById('surname').value;
+
+            if (name == "" || surname == "") {
+                if (name == "") {
+                    alert("Fill in 'Name' field");
+                }
+                if (surname == "") {
+                    alert("Fill in 'Surname' field")
+                }
+            } else {
+                var tmpPerson = {
+                    name,
+                    surname,
+                    isClicked: false
+                }
+                dataCollection.push(tmpPerson);
+
+                document.getElementById('name').value = '';
+                document.getElementById('surname').value = '';
+
+                drawDataCollection(dataCollection);
+            }
+        }
+
+        function drawDataCollection(array) {
+            var htmlBox = "";
+
+            for (var i = 0; i < array.length; i++) {
+                var classbtn = "";
+                if (array[i].isClicked) {
+                    classbtn = "data-box data-box-active";
+                } else {
+                    classbtn = "data-box";
+                }
+
+                htmlBox += '<div class="' + classbtn + '" data-attr="' + i + '"><span>' +
+                    array[i].name +
+                    '</span><span>' +
+                    array[i].surname +
+                    '</span></div>'
+            }
+            document.getElementById('myDiv').innerHTML = htmlBox;
+
+            var arrayBox = document.getElementsByClassName('data-box');
+            for (var j = 0; j < arrayBox.length; j++) {
+                arrayBox[j].addEventListener('click', function () {
+                    var elementIndex = this.getAttribute('data-attr');
+
+                    if (dataCollection[elementIndex].isClicked) {
+                        this.classList.remove('data-box-active');
+                    } else {
+                        this.classList.add('data-box-active');
+                    }
+                    dataCollection[elementIndex].isClicked = !dataCollection[elementIndex].isClicked;
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>

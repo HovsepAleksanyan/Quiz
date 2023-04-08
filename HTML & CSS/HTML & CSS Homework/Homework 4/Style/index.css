@@ -1,0 +1,80 @@
+.header{
+    font-size: 35px;
+    font-weight: bold;
+    background-color: rgb(210,210,210);
+    text-align: center;
+    border: 1px solid rgb(210,210,210);
+    border-radius: 15px;
+}
+.nav{
+   font-size: 35px;
+   margin-top: 8px;
+    font-weight: bold;
+    background-color: rgb(139,174,216);
+    text-align: center;
+    border: 1px solid rgb(139,174,216);
+    border-radius: 10px;
+   display: block;
+   padding: 10px 0 7px;
+}
+
+.section{
+    font-size: 35px;
+    margin-top: 20px;
+    width: 60%;
+    
+     font-weight: bold;
+     background-color: rgb(210,210,210);
+     text-align: center;
+     border: 1px solid rgb(210,210,210);
+     border-radius: 20px;
+}
+.article1{
+    font-size: 35px;
+    font-weight: bold;
+    background-color: rgb(139,174,216);
+    margin: 65px 35px 0;
+    padding: 10px 0 10px;
+    border-radius: 15px;
+}
+.articles{
+    font-size: 35px;
+    font-weight: bold;
+    background-color: rgb(139,174,216);
+    margin: 35px 35px 0;
+    padding: 10px 0 10px;
+    border-radius: 15px;
+}
+.article4{
+    font-size: 35px;
+    font-weight: bold;
+    background-color: rgb(139,174,216);
+    margin: 35px 35px 60px;
+    padding: 10px 0 10px;
+    border-radius: 15px;
+}
+
+.aside{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    width: 39%;
+    margin: 20px 0 0 0;
+    border: 1px solid rgb(208,223,153);
+    border-radius: 20px;
+    height: 825px;
+    background-color: rgb(208,223,153);
+    float: right;
+}
+
+
+.footer{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    padding: 1px 0 1px;
+    margin-top: 25px;
+    background-color: rgb(139,174,216);
+    border: 1px solid rgb(139,174,216);
+    border-radius: 15px;
+}

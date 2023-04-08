@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 13</title>
+    <style>
+        section {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        input {
+            display: block;
+            margin: 5px;
+            width: 180px;
+            height: 20px;
+        }
+
+        input:focus {
+            outline: none;
+            color: #333232;
+        }
+
+        button {
+            height: 25px;
+            margin: -100px 5px;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <section>
+        <div class="input-div">
+            <input type="text" placeholder="Name" id="person-name" autocomplete="off">
+            <input type="text" placeholder="Surname" id="person-surname" autocomplete="off">
+            <input type="text" placeholder="Age" id="person-age" autocomplete="off">
+            <input type="text" placeholder="Height" id="person-heigth" autocomplete="off">
+            <input type="text" placeholder="Weight" id="person-weight" autocomplete="off">
+            <br>
+            <button onclick="getDataPerson()">Add</button>
+            <button onclick="viewPerson()">View person's datas</button>
+        </div>
+        <div class="table-div">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Age</th>
+                        <th>Height</th>
+                        <th>Weight</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyResult"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <script>
+        var person = [];
+       
+
+        function getDataPerson() {
+            var namePerson = document.getElementById("person-name").value;
+            var surnamePerson = document.getElementById("person-surname").value;
+            var agePerson = parseInt(document.getElementById("person-age").value);
+            var heightPerson = parseInt(document.getElementById("person-heigth").value);
+            var weightPerson = parseInt(document.getElementById("person-weight").value);
+
+            if (namePerson == "" ||
+                surnamePerson == "" ||
+                agePerson <= 0 ||
+                heightPerson <= 0 ||
+                weightPerson <= 0) {
+
+                if (namePerson == "") {
+                    alert("Fill in the Name field");
+                }
+                if (surnamePerson == "") {
+                    alert("Fill in the Surname field");
+                }
+                if (agePerson <= 0) {
+                    alert("Age must be greater than 0");
+                }
+                if (heightPerson <= 0) {
+                    alert("Height must be greater than 0");
+                }
+                if (weightPerson <= 0) {
+                    alert("Weight must be greater than 0");
+                }
+            }
+            else {
+                var tmpPerson = {
+                    name: namePerson,
+                    surname: surnamePerson,
+                    age: agePerson,
+                    height: heightPerson,
+                    weight: weightPerson
+                }
+                person.push(tmpPerson);
+                console.log(tmpPerson);
+            }
+            
+        }
+
+        function viewPerson() {
+            var resultPersonIp = document.getElementById("tbodyResult");
+        var resultPerson = "";
+            for (var i = 0; i < person.length; i++) {
+                resultPerson = resultPerson+ "<tr><td>" + person[i].name + "</td>" + "<td>" +
+                    person[i].surname + "</td>" + "<td>" + person[i].age + "</td>" + "<td>" +
+                    person[i].height + "</td>" + "<td>" + person[i].weight + "</td></tr>"
+                    resultPersonIp.innerHTML = resultPerson;
+                }
+        }
+
+    </script>
+</body>
+
+</html>

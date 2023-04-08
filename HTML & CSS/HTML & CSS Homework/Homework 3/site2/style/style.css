@@ -1,0 +1,85 @@
+.header{
+	color: white;
+	font-size: 25px;
+	background-color: rgb(122,193,65);
+    padding: 5px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+
+.nav{
+	color: white;
+	font-size: 25px;
+	background-color: rgb(243,143,45);
+	padding: 5px;
+	text-align: center;
+	border: 2px solid black;
+	margin-top: 4px;
+}
+
+
+.aside{
+	color: white;
+	font-size: 25px;
+	background-color: rgb(0,110,179);
+	text-align: center;
+	border: 2px solid black;
+	float: right;
+	margin-top: 7px;
+	width: 35%;
+	height: 750px;
+}
+
+
+
+.section{
+	text-align: center;
+	color: white;
+	background-color: rgb(255,192,0);
+	font-size: 25px;
+	border: 2px solid black;
+	width: 64%;
+	margin-top: 7px;
+	height: 750px;
+}
+
+
+.article1{
+	border: 1px solid black;
+	width: 86%;
+	margin-left: 10px;
+	padding: 60px;
+	font-weight: bold;
+	background-color: rgb(122,193,65);
+	font-size: 30px;
+	margin-top: 100px;
+	padding-top: 85px;
+	height: 70px;
+}
+.article2{
+	border: 1px solid black;
+	width: 86%;
+	margin-left: 10px;
+	padding: 60px;
+	padding-top: 85px;
+	font-size: 30px;
+	font-weight: bold;
+	background-color: rgb(122,193,65);
+	margin-top: 20px;
+	height: 70px;
+}
+.section > h2{
+	padding-top: 60px;
+}
+
+
+.footer{
+	color: white;
+	font-size: 25px;
+	background-color: rgb(144,44,140);
+    padding: 5px;
+    text-align: center;
+    border: 2px solid black;
+    margin-top: 7px;
+}

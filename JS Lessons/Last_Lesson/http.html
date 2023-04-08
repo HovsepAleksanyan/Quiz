@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/todos/1', { method: 'GET' })
+            .then(response => response.json())
+            .then(json => console.log(json))
+
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: JSON.stringify({
+                title: 'title',
+                body: 'body',
+                userId: 1,
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            }
+        })
+            .then((response) => response.json())
+            .then((json) => console.log(json));
+
+        let http = new XMLHttpRequest();
+        http.open('GET', 'https://jsonplaceholder.typicode.com/todos/1', true);
+        http.onreadystatechange = function () {
+            if (http.readyState == 4) {
+                console.log(JSON.parse(http.responseText));
+            }
+        }
+        http.send();
+
+        let http2 = new XMLHttpRequest();
+        http2.open('POST', 'https://jsonplaceholder.typicode.com/posts');
+        let json = JSON.stringify({
+            title: 'title',
+            body: 'body',
+            userId: 2,
+        });
+        http2.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        http2.onreadystatechange = function () {
+            if (http2.readyState == 4 && http2.status == 201) {
+                console.log(JSON.parse(http2.responseText));
+            }
+        }
+        http2.send(json);
+    </script>
+</body>
+
+</html>

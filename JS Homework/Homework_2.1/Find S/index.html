@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find S</title>
+</head>
+
+<body>
+    <script>
+        var v = parseInt(prompt("Արագություն (V)`"));
+        var t = parseInt(prompt("Ժամանակ (T)`"));
+
+        var e = v <= 0;
+        var f = t <= 0;
+
+        if (e || f) {
+            alert("0 և փոքր արժեք հնարավաոր չէ լրացնել");
+        }
+        else {
+            var s = v * t;
+            alert("Ճանապարհ (V) = " + s);
+        }
+    </script>
+</body>
+
+</html>

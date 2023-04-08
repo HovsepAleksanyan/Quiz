@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var lng = parseInt(prompt());
+        var lng2 = parseInt(prompt());
+
+        var myArr = generateRndArray(lng);
+        var myArr2 = generateRndArray(lng2);
+
+        console.log(myArr);
+        console.log(myArr2);
+
+        function generateRndArray(length) {
+            var tmpArr = [];
+
+            for (var i = 0; i < length; i++) {
+                var tmpVal = Math.floor(Math.random() * 100);
+                tmpArr.push(tmpVal);
+            }
+
+            return tmpArr;
+        }
+
+        console.log(doIt(5, 4))
+
+        function doIt(x, y) {
+            var plusVal = x + y;
+            var minusVal = x - y;
+            var multipleVal = x * y
+
+            var result = {
+                plusVal,
+                minusVal,
+                multipleVal
+            };
+
+            return result;
+        }
+    </script>
+</body>
+
+</html>

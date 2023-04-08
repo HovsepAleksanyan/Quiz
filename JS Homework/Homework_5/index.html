@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [5, 20, 17, 3, 19, 21];
+        var isPrime = false;
+        var sum = 0;
+        var primeLength = 0;
+        var sumx = 1;
+
+        var i = 0;
+        var q = 0;
+        var j = 2;
+
+        while (i < arr.length) {
+
+            var primelength = arr[i] / 2;
+            while (j <= primelength) {
+                if (arr[i] % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+                else {
+                    isPrime = true;
+                }
+                j++
+            }
+            if (isPrime) {
+                sumx = sumx * arr[i]; 
+                sum = sum + arr[i];
+                primeLength++
+            }
+            i++
+        }
+        console.log(sum);
+        console.log(sum / primeLength);
+
+        console.log(sumx);
+        console.log(sumx / primeLength);
+    </script>
+</body>
+
+</html>

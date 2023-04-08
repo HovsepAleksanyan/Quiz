@@ -1,0 +1,85 @@
+* {
+    font-size: 20px;
+}
+
+.logo {
+    width: 7%;
+}
+
+.container {
+    box-sizing: border-box;
+    margin-top: 10%;
+    /* border-bottom: 3px solid #09F2E8; */
+}
+
+.stressed{
+    text-decoration: underline #2DFF95;
+}
+
+/* background-image: linear-gradient(#09F2E8, #2DFF95, #09F2E8); */
+.header {
+    background-color: #2dff9618;
+}
+
+/* Navbar links */
+.nav-item-hover {
+    background-image: linear-gradient(to right, #2DFF95, #09F2E8);
+    height: 2px;
+    width: 5%;
+    margin-top: -4%;
+    opacity: 0;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.nav-item:hover .nav-item-hover {
+    opacity: 1;
+    transition: 0.4s;
+    width: 100%;
+}
+
+.nav {
+    position: sticky;
+}
+
+/* Title */
+.title-line-right {
+    background-image: linear-gradient(to right, #2DFF95, #09F2E8);
+    width: 20%;
+    height: 3px;
+    border-radius: 50px;
+    margin-left: 1%;
+}
+
+.title-line-left {
+    background-image: linear-gradient(to right, #09F2E8, #2DFF95);
+    width: 20%;
+    height: 3px;
+    border-radius: 50px;
+    margin-right: 1%;
+}
+
+/* Welcome */
+.carousel{
+    height: 900px;
+}
+
+.founder{
+    background-image: linear-gradient(100deg, #09f2e666, #2dff9666);
+}
+
+.unavailable{
+    list-style-type: "\2716";
+}
+.available{
+    list-style-type: "\2714";
+}
+
+.tour{
+    background-image: linear-gradient(#2dff9666 1%, #09f2e666);
+}
+
+.footer{
+    margin-top: 10%;
+    background-color: #2dff962a;
+}

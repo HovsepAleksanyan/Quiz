@@ -1,0 +1,59 @@
+body {
+    background-color: lightgray;
+}
+
+* {
+    font-size: 25px;
+}
+
+.variantsBox div {
+    border: 1px solid black;
+    width: 200px;
+    text-align: center;
+    margin: 5px 0;
+    padding: 3px;
+}
+
+.variantsBox {
+    margin: 15px 0;
+}
+
+.reset {
+    display: none;
+}
+
+.questionsBox {
+    margin: 33% 0 0 0;
+    text-align: center;
+}
+
+.variantsBox {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 25px auto 0;
+}
+
+.variantsBox div {
+    width: 45%;
+    margin: 5px 0;
+    border: 5px solid grey;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.questionDiv {
+    margin: 10px auto;
+    text-align: center;
+    width: 49.5%;
+    border: 5px solid grey;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.game {
+    width: 30%;
+    margin: 10% auto 0;
+    text-align: center;
+}

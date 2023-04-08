@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var symbol = [];
+        var str = ["qwerty", "asfabc", "fgqwefd", "wekabcul"];
+
+        var smb = prompt("Send symbols");
+
+        for (var q in str){
+            if (str[q].indexOf(smb) != -1) {
+                symbol.push(str[q]);
+            }
+        }
+        console.log(symbol);
+    </script>
+</body>
+</html>
