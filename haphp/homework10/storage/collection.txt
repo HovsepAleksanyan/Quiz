@@ -1,2 +1,0 @@
-{"name":"Hovsep","surname":"Aleksanyan","username":"ashakertner","password":"123123","re_password":"123123"}
-{"name":"Gohar","surname":"Safaryan","username":"kong","password":"7821227","re_password":"7821227"}
